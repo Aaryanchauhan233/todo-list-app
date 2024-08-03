@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Items</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+        <style>
+            body {
+                background-color: #e9ecef;
+                font-family: "Helvetica Neue", sans-serif;
+                padding-top: 60px;
+            }
+    
+            .container {
+                max-width: 700px;
+                margin: auto;
+                background-color: #ffffff;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                overflow: hidden;
+            }
+    
+            a,
+            p {
+                color: #495057;
+            }
+    
+            .header-bar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #ffffff;
+                padding: 15px;
+                border-radius: 10px 10px 0 0;
+                background: linear-gradient(90deg, #007bff, #6610f2);
+            }
+    
+            .header-bar form button {
+                color: #ffffff;
+                text-decoration: none;
+                background-color: #6610f2;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-size: 16px;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+    
+            .header-bar form button:hover {
+                background-color: #563d7c;
+            }
+    
+            .task-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px;
+                background-color: #ffffff;
+                border-top: 1px solid #dee2e6;
+            }
+    
+            .task-title a {
+                text-decoration: none;
+                color: #495057;
+                margin-left: 10px;
+            }
+    
+            .task-complete-icon {
+                height: 20px;
+                width: 20px;
+                background-color: #28a745;
+                border-radius: 50%;
+            }
+    
+            .task-incomplete-icon {
+                height: 20px;
+                width: 20px;
+                background-color: #ffc107;
+                border-radius: 50%;
+            }
+    
+            .delete-link {
+                text-decoration: none;
+                font-weight: bold;
+                color: #dc3545;
+                font-size: 18px;
+                line-height: 0;
+                transition: color 0.3s ease;
+            }
+    
+            .delete-link:hover {
+                color: #bd2130;
+            }
+    
+            #search-add-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+            }
+    
+            #add-link {
+                color: #6610f2;
+                text-decoration: none;
+                font-size: 42px;
+                text-shadow: 1px 1px #343a40;
+            }
+    
+            input[type=text],
+            input[type=password],
+            textarea {
+                border: 1px solid #ced4da;
+                border-radius: 5px;
+                padding: 10px;
+                width: 90%;
+            }
+    
+            label {
+                padding-top: 10px !important;
+                display: block;
+            }
+    
+            .button {
+                border: 1px solid #6610f2;
+                background-color: #ffffff;
+                color: #6610f2;
+                padding: 10px;
+                font-size: 14px;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+    
+            .button:hover {
+                background-color: #6610f2;
+                color: #ffffff;
+            }
+    
+            .card-body {
+                padding: 20px;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+
+
+</body>
+
+</html>
